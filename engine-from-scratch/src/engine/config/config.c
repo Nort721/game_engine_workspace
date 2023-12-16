@@ -11,6 +11,7 @@ static const char *CONFIG_DEFAULT =
         "up = W\n"
         "down = S\n"
         "escape = Escape\n"
+        "stress_level = small\n"
         "\n";
 
 static char tmp_buffer[20] = {0};
@@ -54,12 +55,18 @@ static void load_controls(const char *config_buffer)
     config_key_bind(INPUT_KEY_ESCAPE, config_get_value(config_buffer, "escape"));
 }
 
+static void load_values(const char *config_buffer)
+{
+    global.config.stress_level = config_get_value(config_buffer, "stress_level");
+}
+
 static int config_load(void) {
     File file_config = io_file_read("./config.ini");
     if (!file_config.is_valid)
         return 1;
     
     load_controls(file_config.data);
+    load_values(file_config.data);
 
     free(file_config.data);
 

@@ -43,6 +43,20 @@ int main(int argc, char *argv[])
 
     u32 body_count = 100;
 
+    if (strcmp(global.config.stress_level, "highp") == 0)
+    {
+        printf("Stress test level: high\n");
+        body_count = 5000;
+    } else if (strcmp(global.config.stress_level, "medium") == 0)
+    {
+        printf("Stress test level: medium\n");
+        body_count = 1500;
+    }
+    else
+    {
+        printf("Stress test level: small\n");
+    }
+
     for (u32 i = 0; i < body_count; ++i)
     {
         usize body_index = physics_body_create(

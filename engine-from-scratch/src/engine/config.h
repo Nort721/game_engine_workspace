@@ -5,6 +5,7 @@
 
 typedef struct config {
     u8 keybinds[5];
+    char *stress_level;
 } Config_State;
 
 void config_init(void);
