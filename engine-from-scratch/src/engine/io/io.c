@@ -4,7 +4,7 @@
 
 #include "../types.h"
 #include "../util.h"
-#include "io.h"
+#include "../io.h"
 
 // 20 MiB, can probably change this to a higher value without issue.
 #define IO_READ_CHUNK_SIZE 2097152

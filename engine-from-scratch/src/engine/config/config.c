@@ -1,8 +1,8 @@
 #include "../global.h"
-#include "../io/io.h"
+#include "../io.h"
 #include "../util.h"
-#include "../input/input.h"
-#include "../config/config.h"
+#include "../input.h"
+#include "../config.h"
 
 static const char *CONFIG_DEFAULT =
         "[controls]\n"

@@ -1,10 +1,9 @@
-#ifndef GLOBAL_H
-#define GLOBAL_H
+#pragma once
 
-#include "render/render.h"
-#include "config/config.h"
-#include "input/input.h"
-#include "time/time.h"
+#include "render.h"
+#include "config.h"
+#include "input.h"
+#include "time.h"
 
 typedef struct global {
     Render_State render;
@@ -14,5 +13,3 @@ typedef struct global {
 } Global;
 
 extern Global global;
-
-#endif

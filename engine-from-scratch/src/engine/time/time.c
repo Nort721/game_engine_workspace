@@ -1,5 +1,5 @@
 #include <SDL2/SDL.h>
-#include "../time/time.h"
+#include "../time.h"
 #include "../global.h"
 
 void time_init(u32 frame_rate)

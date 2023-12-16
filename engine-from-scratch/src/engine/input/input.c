@@ -1,4 +1,4 @@
-#include "../input/input.h"
+#include "../input.h"
 #include "../global.h"
 #include "../types.h"
 
