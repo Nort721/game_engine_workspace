@@ -11,7 +11,6 @@ static const char *CONFIG_DEFAULT =
         "up = W\n"
         "down = S\n"
         "escape = Escape\n"
-        "stress_level = small\n"
         "\n";
 
 static char tmp_buffer[20] = {0};
@@ -57,7 +56,6 @@ static void load_controls(const char *config_buffer)
 
 static void load_values(const char *config_buffer)
 {
-    global.config.stress_level = config_get_value(config_buffer, "stress_level");
 }
 
 static int config_load(void) {
